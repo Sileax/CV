@@ -1,14 +1,14 @@
-import { TestAngular4Page } from './app.po';
+import { QuickstartAngular2Page } from './app.po';
 
-describe('test-angular4 App', () => {
-  let page: TestAngular4Page;
+describe('quickstart-angular2 App', () => {
+  let page: QuickstartAngular2Page;
 
   beforeEach(() => {
-    page = new TestAngular4Page();
+    page = new QuickstartAngular2Page();
   });
 
-  it('should display welcome message', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });
