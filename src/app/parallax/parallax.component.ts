@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterContentChecked, ElementRef, Renderer } from '@angular/core';
 
 @Component({
   selector: 'app-parallax',
   templateUrl: './parallax.component.html',
   styleUrls: ['./parallax.component.scss']
 })
-export class ParallaxComponent implements OnInit {
+export class ParallaxComponent implements AfterContentChecked {
 
-  constructor() { }
+  height: number;
 
-  ngOnInit() {
+  constructor(private _el : ElementRef, private _renderer : Renderer) {
+   }
+
+  ngAfterContentChecked() {
+    this.height = this._el.nativeElement.offsetHeight;
   }
 
 }
