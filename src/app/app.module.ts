@@ -21,13 +21,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CursusComponent } from './cursus/cursus.component';
 import { ScrollToModule } from 'ng2-scroll-to';
+import { ParallaxComponent } from './parallax/parallax.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ProfileComponent,
-    CursusComponent
+    CursusComponent,
+    ParallaxComponent
   ],
   imports: [
     BrowserModule,

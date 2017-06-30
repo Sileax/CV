@@ -49,13 +49,28 @@ import {SimplePageScrollConfig, SimplePageScrollService} from 'ng2-simple-page-s
 
 export class ProfileComponent implements AfterViewChecked {
 
-  visibility : boolean = true;
+  visibility : boolean = false;
+  position : number;
 
 
   constructor(private _el : ElementRef, private _renderer : Renderer) {
+    this.position = this._el.nativeElement.offsetTop;
+    console.log(this.position);
+
+    if(this.position - 150 < window.screen.height) {
+      this.visibility = true;
+    }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScrollEvent($event) {
+    if ($event.pageY > this.position - 150) {
+      this.visibility = true;
+    }
   }
 
   ngAfterViewChecked() {
+    console.log(document.getElementById('#profile').offsetHeight);
   }
 
 }
