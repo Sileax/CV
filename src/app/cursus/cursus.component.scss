@@ -1,8 +1,7 @@
 .cursus{
-    opacity: 0.6;
     font-family: 'Roboto';
     font-size: 22px;
-    background-color: #f5f5f5;
+    background-color: #fff;
     min-height: 400px;
 
     .text-margin{
@@ -11,5 +10,35 @@
       margin-top: 2.5em;
     }
 
+    .col-center{
+      justify-content: center; /* align horizontal */
+      align-items: center;
+    }
+
+    .grey-color {
+      color: #8a8a8a;
+    }
+
+    .margin-bottom{
+      margin-bottom: 5vh;
+    }
+
+    @media screen and (min-width: 995px) and (min-height: 700px){
+      .padding-top-estiam {
+        padding-top: 6.5vh;
+      }
+    }
+
+    @media screen and (min-width: 995px) and (max-height: 650px){
+      .padding-top-estiam {
+        padding-top: 10vh;
+      }
+    }
+
+    @media screen and (max-width: 995px){
+      .margin-bottom-xs{
+        margin-bottom: 5vh;
+      }
+    }
 
 }

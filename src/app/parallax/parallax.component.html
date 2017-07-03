@@ -1,58 +1,119 @@
-
 <!--Main parallax wrapper-->
 <div class="parallax full-screen">
 
-    <!--First section-->
-    <div id="section-1" class="parallax-section">
+  <!--First section-->
+  <div id="section-1" class="parallax-section">
 
-        <!--Parallax content-->
-        <div class="parallax-layer parallax-layer-base">
+    <!--Parallax content-->
+    <div class="parallax-layer parallax-layer-base">
 
-            <!--Container to center the content-->
-            <div class="full-bg-img flex-center">
-                <ul>
-                    <li>
-                        <h1 class="h1-responsive wow fadeInDown" data-wow-delay="0.2s"><span class="mg-right name-text font-weight-bold white-text shadow-outline">VALERIAN</span> <span class="last-name-color font-weight-bold name-text">CRASNIER</span></h1></li>
-                    <li>
-                        <h2 class="h2-responsive wow fadeInDown job font-weight-bold shadow-outline" data-wow-delay="0.2s">Developpeur Web</h2>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/valerian-crasnier-01836a131/"><button type="button" class="btn btn-li" ripple-radius><i class="fa fa-linkedin left"></i>  Linkedin</button></a>
-                        <a href="https://github.com/sileax"><button type="button" class="btn btn-git" ripple-radius><i class="fa fa-github left"></i>Github</button></a>
-                    </li>
-                </ul>
-            </div>
-            <!--/Container to center the content-->
-
-        </div>
-        <!--/Parallax content-->
-
-        <!--Parallax background-->
-        <div class="parallax-layer parallax-layer-back">
-
-        </div>
-        <!--/Parallax background-->
+      <!--Container to center the content-->
+      <div class="full-bg-img flex-center">
+        <ul>
+          <li>
+            <h1 class="h1-responsive wow fadeInDown" data-wow-delay="0.2s"><span class="mg-right name-text font-weight-bold white-text shadow-outline">VALERIAN</span> <span class="last-name-color font-weight-bold name-text">CRASNIER</span></h1>
+          </li>
+          <li>
+            <h2 class="h2-responsive wow fadeInDown job font-weight-bold shadow-outline" data-wow-delay="0.2s">Developpeur Web</h2>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/valerian-crasnier-01836a131/"><button type="button" class="btn btn-li" ripple-radius><i class="fa fa-linkedin left"></i>  Linkedin</button></a>
+            <a href="https://github.com/sileax"><button type="button" class="btn btn-git" ripple-radius><i class="fa fa-github left"></i>Github</button></a>
+          </li>
+        </ul>
+      </div>
+      <!--/Container to center the content-->
 
     </div>
-    <!--/First section-->
+    <!--/Parallax content-->
 
-    <!--Dummy Content-->
-    <div id="section-2">
-        <div class="container-fluid pt-1 mb-3">
+    <!--Parallax background-->
+    <div class="parallax-layer parallax-layer-intro">
 
-            <div class="row">
-                <div class="col-md-12" id="profile">
-                    <app-profile [parentHeight]="height"></app-profile>
-                </div>
-            </div>
+    </div>
+    <!--/Parallax background-->
 
+  </div>
+  <!--/First section-->
+
+  <!--Dummy Content-->
+  <div id="section-2">
+    <div class="container-fluid pt-1 mb-3">
+
+      <div class="row">
+        <div class="col-md-12" id="profile">
+          <app-profile [parentHeight]="height"></app-profile>
         </div>
-    </div>
-
-    <div id="section-3">
+      </div>
 
     </div>
-    <!--Dummy Content-->
+  </div>
+
+  <div id="section-3">
+
+    <div class="parallax-layer parallax-layer-studies">
+      <div class="full-bg-img">
+
+      </div>
+    </div>
+
+    <div class="parallax-layer-base-studies">
+      <div class="full-bg-img flex-center">
+        <ul>
+          <li>
+            <h1 class="h1-responsive wow fadeInDown" data-wow-delay="0.2s"><span class="mg-right name-text font-weight-bold studies-color shadow-outline">CURSUS UNIVERSITAIRE</span></h1>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="section-4">
+    <div class="container-fluid pt-1 mb-3">
+
+      <div class="row">
+        <div class="col-md-12" id="cursus">
+          <app-cursus [parentHeight]="height"></app-cursus>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div id="section-5">
+
+    <div class="parallax-layer parallax-layer-studies">
+      <div class="full-bg-img">
+
+      </div>
+    </div>
+
+    <div class="parallax-layer-base-studies">
+      <div class="full-bg-img flex-center">
+        <ul>
+          <li>
+            <h1 class="h1-responsive wow fadeInDown" data-wow-delay="0.2s"><span class="mg-right name-text font-weight-bold skills-color shadow-outline">COMPETENCES</span></h1>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="section-6">
+    <div class="container-fluid pt-1 mb-3">
+
+      <div class="row">
+        <div class="col-md-12" id="skills">
+          <app-skills [parentHeight]="height"></app-skills>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--Dummy Content-->
 
 </div>
 <!--/Main parallax wrapper-->

@@ -1,42 +1,42 @@
-import {Component, ElementRef, Renderer, AfterViewChecked, HostListener} from '@angular/core';
+import {Component, ElementRef, Renderer, AfterViewChecked, Input, HostListener} from '@angular/core';
 import {trigger, state, style, animate, transition} from '@angular/animations';
 
 @Component({
   selector: 'app-cursus',
-  animations: [trigger('visibilityChanged', [transition(':enter', [
+  /*animations: [trigger('visibilityChanged', [transition(':enter', [
         style({transform: 'translateX(-100%)', visibility: 'hidden'}),
         animate('800ms', style({transform: 'translateX(0)', visibility: 'visible'}))
-      ])])],
+      ])])],*/
   template: `
       <section class="cursus">
-        <div class="container-fluid" *ngIf="visibility" [@visibilityChanged]>
-          <div class="row" id="studies">
-            <div class="col-12 text-margin">
-              <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Fusce id sem finibus enim consequat faucibus in et dui.
-                  Fusce varius, nulla ut imperdiet elementum, arcu purus hendrerit leo, vel dignissim arcu nulla a lorem.
-                  Maecenas sed metus augue. Aliquam erat volutpat. Ut pharetra quam et sapien ullamcorper maximus.
-                  Curabitur lacus nunc, interdum eu velit quis, pharetra tempor dolor. Fusce risus odio, pretium sed neque in, vestibulum luctus elit.
-                  Nunc vitae ligula augue. Curabitur a lectus leo. Phasellus fermentum lacus sit amet erat ullamcorper accumsan.
-              </p>
-              <p>
-                Cras tincidunt odio nec risus dapibus, nec consequat arcu suscipit.
-                Cras iaculis dui justo, et porttitor augue euismod a. Donec id neque luctus, tempus ipsum vel, ultrices nunc.
-                Sed lobortis, lectus ut facilisis ornare, mi erat malesuada magna, vitae semper ligula neque sed urna.
-                Vestibulum et nisl vel nisi hendrerit condimentum. In vestibulum est ut porta dapibus. Nullam vitae auctor velit. Aenean convallis placerat pulvinar.
-              </p>
-              <p>
-                Phasellus et varius risus, imperdiet varius mi.
-                In faucibus lacus euismod elit pharetra, sed accumsan ante dictum.
-                Sed malesuada est est. Nulla tristique ex at ornare viverra.
-                Etiam in efficitur magna, ac elementum purus. Ut ac justo tincidunt, convallis ligula quis, rutrum arcu.
-                Vestibulum sollicitudin tellus eu orci vehicula suscipit.
-                Vestibulum magna enim, ultrices sit amet elit eu, efficitur efficitur leo. Nam ac rutrum risus.
-                Etiam id sagittis turpis. Vestibulum rhoncus laoreet nulla, ut dictum enim iaculis non.
-                In placerat venenatis luctus. Duis gravida, purus quis fringilla fermentum, lacus mauris sagittis sem, quis lobortis urna nunc id urna.
-                Nam ut velit eget nisi sodales elementum id nec metus.
-              </p>
+        <div class="container-fluid">
+          <div class="row col-center" id="studies">
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 wow zoomIn" data-wow-delay="0.2s">
+              <div class="row margin-bottom">
+                <img src="../../../img/svg/ISTV.svg"/>
+              </div>
+              <div class="row grey-color">
+                <div class="col-12"> 2013 -> 2015 </div>
+                <div class="col-12">Diplomé du DEUST Informatique d'organisation et systemes d'informations </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 wow zoomIn" data-wow-delay="0.5s">
+              <div class="row margin-bottom">
+                <img src="../../../img/svg/ISTV.svg"/>
+              </div>
+              <div class="row grey-color margin-bottom-xs">
+                <div class="col-12"> 2015 -> 2016 </div>
+                <div class="col-12">Diplomé de la licence Technologie de l'information et Internet </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 wow zoomIn estiam-margin" data-wow-delay="0.8s">
+              <div class="row padding-top-estiam margin-bottom-xs">
+                <img src="../../../img/svg/ESTIAM.svg"/>
+              </div>
+              <div class="row grey-color padding-top-estiam">
+                <div class="col-12"> 2016 -> 2018 </div>
+                <div class="col-12"> Actuellement en 4ème année a l'école ESTIAM de Tourcoing (Passage en 5ème année validé) </div>
+              </div>
             </div>
           </div>
         </div>
@@ -49,21 +49,23 @@ export class CursusComponent implements AfterViewChecked {
 
   visibility : boolean = false;
   position : number = 0;
+  @Input() parentHeight = 0;
 
   constructor(private _el : ElementRef, private _renderer : Renderer) {}
 
   ngAfterViewChecked() {
     this.position = this._el.nativeElement.offsetTop;
-    if(this.position - 150 < window.screen.height) {
-      this.visibility = true;
-    }
+    console.log(this.parentHeight);
+
   }
 
   @HostListener('window:scroll', ['$event'])
   onScrollEvent($event) {
-    if ($event.pageY > this.position - 150) {
+    if ($event.pageY > this.position + this.parentHeight - window.screen.height / 2) {
       this.visibility = true;
     }
+    console.log($event.pageY);
+
   }
 
 }

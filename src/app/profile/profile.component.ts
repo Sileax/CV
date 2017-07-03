@@ -14,13 +14,13 @@ import {SimplePageScrollConfig, SimplePageScrollService} from 'ng2-simple-page-s
         <div class="container-fluid" *ngIf="visibility" [@visibilityChanged]>
           <div class="row" id="profile">
             <div class="col-12 text-margin">
-                  <div class="text-center intro light-blue-text font-weight-bold">Bonjour ! Je m'appelle Valerian et je suis développeur web.</div>
+                  <div class="text-center intro navbar-color font-weight-bold">Bonjour ! Je m'appelle Valerian et je suis développeur web.</div>
 
-              <p>
+              <p class="light-grey">
                   Plus qu'un metier c'est une passion pour moi, et cela a commencé lors de ma première année d'etude supérieure.
                   J'ai dépuis bien progressé, acquis de l'experience au fil du temps mais le fun est resté intact.
               </p>
-              <p>
+              <p class="light-grey">
                   Durant mes années d'étude j'ai pu progresser dans des technologies variées telles que le Javascript, PHP, Java, C/C++, HTML5, CSS/SASS...
                   J'ai choisi de me spécialiser dans les technologies web, plus spécifiquement le developpement front-end.
               </p>

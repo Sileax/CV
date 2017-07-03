@@ -1,5 +1,4 @@
 .profile{
-    opacity: 0.6;
     font-family: 'Roboto';
     font-size: 22px;
     min-height: 400px;
@@ -15,5 +14,14 @@
     .intro{
       margin-bottom: 1.5em;
       font-size: 40px;
+    }
+
+    .navbar-color{
+      color: #2BBBAD;
+      opacity: 0.88;
+    }
+
+    .light-grey {
+      opacity: 0.6;
     }
 }

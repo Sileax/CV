@@ -3331,6 +3331,12 @@ nested-error-stacks@^2.0.0:
   dependencies:
     inherits "~2.0.1"
 
+ng2-charts@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/ng2-charts/-/ng2-charts-1.6.0.tgz#108a2133ff62a8623895240fadbddbea2951f29d"
+  dependencies:
+    chart.js "^2.6.0"
+
 ng2-scroll-to@^1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/ng2-scroll-to/-/ng2-scroll-to-1.0.7.tgz#b86380c176d911e22a710e68db1a13f9c073481e"

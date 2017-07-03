@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 //typescript version
 // import { MDBBootstrapModule } from './typescripts/angular-bootstrap-md/free';
@@ -22,6 +23,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { CursusComponent } from './cursus/cursus.component';
 import { ScrollToModule } from 'ng2-scroll-to';
 import { ParallaxComponent } from './parallax/parallax.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +31,15 @@ import { ParallaxComponent } from './parallax/parallax.component';
     NavbarComponent,
     ProfileComponent,
     CursusComponent,
-    ParallaxComponent
+    ParallaxComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
+    ChartsModule,
     ScrollToModule.forRoot(),
     MDBBootstrapModule.forRoot(),
     AgmCoreModule.forRoot({

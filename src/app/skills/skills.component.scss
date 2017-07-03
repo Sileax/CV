@@ -1,0 +1,39 @@
+.skills{
+    font-family: 'Roboto';
+    font-size: 22px;
+    background-color: #fff;
+    min-height: 400px;
+
+    .text-margin{
+      padding-right: 15%;
+      padding-left: 15%;
+      margin-top: 2.5em;
+    }
+
+    img {
+      max-width: 50%;
+      min-height: 215px;
+      max-height: 281px;
+    }
+
+    .col-center{
+      justify-content: center; /* align horizontal */
+      align-items: center;
+    }
+
+    .grey-color {
+      color: #8a8a8a;
+    }
+
+    .item-center{
+      align-content: center;
+      justify-content: center;
+    }
+
+    .padding-canvas{
+      padding-right:30%;
+      padding-left:30%;
+      padding-top: 15%;
+    }
+
+}
