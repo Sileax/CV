@@ -23,7 +23,7 @@ import {Component, OnInit} from '@angular/core';
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow fadeIn" data-wow-delay="1s" data-wow-duration="2s">
               <div class="row item-center">
-                <img class="small-logo" sassets/images/svg/angular.svg"/>
+                <img class="small-logo" src="assets/images/svg/angular.svg"/>
               </div>
               <div class="row item-center">
                 <div class="red-text">ANGULAR 2/4</div>
