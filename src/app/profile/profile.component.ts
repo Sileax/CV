@@ -14,7 +14,7 @@ import { DOCUMENT } from '@angular/platform-browser';
         <div class="container-fluid" *ngIf="visibility" [@visibilityChanged]>
           <div class="row" id="profile">
             <div class="col-12 text-margin">
-                  <div class="text-center intro navbar-color font-weight-bold">Bonjour ! Je m'appelle Valerian et je suis développeur web.</div>
+                  <div class="text-center intro navbar-color font-weight-bold"><p>Bonjour ! </p> Je m'appelle Valerian et je suis développeur web.</div>
 
               <p class="light-grey">
                   Plus qu'un metier c'est une passion pour moi, et cela a commencé lors de ma première année d'études supérieure.
