@@ -12,8 +12,8 @@ import {trigger, state, style, animate, transition} from '@angular/animations';
         <div class="container-fluid">
           <div class="row col-center" id="studies">
             <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 wow zoomIn" data-wow-delay="0.2s">
-              <div class="row margin-bottom">
-                <img src="../../../img/svg/ISTV.svg"/>
+              <div class="row margin-bottom col-center">
+                <img src="../../../img/jpg/ISTV.png"/>
               </div>
               <div class="row grey-color">
                 <div class="col-12"> 2013 -> 2015 </div>
@@ -21,8 +21,8 @@ import {trigger, state, style, animate, transition} from '@angular/animations';
               </div>
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 wow zoomIn" data-wow-delay="0.5s">
-              <div class="row margin-bottom">
-                <img src="../../../img/svg/ISTV.svg"/>
+              <div class="row margin-bottom col-center">
+                <img src="../../../img/jpg/ISTV.png"/>
               </div>
               <div class="row grey-color margin-bottom-xs">
                 <div class="col-12"> 2015 -> 2016 </div>
@@ -30,8 +30,8 @@ import {trigger, state, style, animate, transition} from '@angular/animations';
               </div>
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 wow zoomIn estiam-margin" data-wow-delay="0.8s">
-              <div class="row padding-top-estiam margin-bottom-xs">
-                <img src="../../../img/svg/ESTIAM.svg"/>
+              <div class="row padding-top-estiam margin-bottom-xs col-center">
+                <img src="../../../img/jpg/ESTIAM.png"/>
               </div>
               <div class="row grey-color padding-top-estiam">
                 <div class="col-12"> 2016 -> 2018 </div>
@@ -55,17 +55,7 @@ export class CursusComponent implements AfterViewChecked {
 
   ngAfterViewChecked() {
     this.position = this._el.nativeElement.offsetTop;
-    console.log(this.parentHeight);
-
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onScrollEvent($event) {
-    if ($event.pageY > this.position + this.parentHeight - window.screen.height / 2) {
-      this.visibility = true;
-    }
-    console.log($event.pageY);
-
-  }
 
 }

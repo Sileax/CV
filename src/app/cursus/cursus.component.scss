@@ -23,9 +23,14 @@
       margin-bottom: 5vh;
     }
 
+    img {
+      max-width: 100%;
+      width: auto;
+    }
+
     @media screen and (min-width: 995px) and (min-height: 700px){
       .padding-top-estiam {
-        padding-top: 6.5vh;
+        padding-top: 4.5vh;
       }
     }
 

@@ -1,4 +1,4 @@
-import { Component, AfterContentChecked, ElementRef, Renderer } from '@angular/core';
+import { Component, AfterContentChecked, ViewChild, ElementRef, Renderer } from '@angular/core';
 
 @Component({
   selector: 'app-parallax',
@@ -7,10 +7,11 @@ import { Component, AfterContentChecked, ElementRef, Renderer } from '@angular/c
 })
 export class ParallaxComponent implements AfterContentChecked {
 
+  @ViewChild('mainSection') _el: ElementRef;
   height: number;
 
-  constructor(private _el : ElementRef, private _renderer : Renderer) {
-   }
+  constructor() {
+  }
 
   ngAfterContentChecked() {
     this.height = this._el.nativeElement.offsetHeight;

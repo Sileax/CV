@@ -131,8 +131,16 @@
         ul {
           li {
 
-            .name-text{
-              font-size: 60px;
+            @media screen and (min-width: 450px){
+              .name-text{
+                font-size: 60px;
+              }
+            }
+
+            @media screen and (max-width: 450px){
+              .name-text{
+                font-size: 40px;
+              }
             }
 
             .studies-color{
@@ -206,8 +214,16 @@
         ul {
           li {
 
-            .name-text{
-              font-size: 60px;
+            @media screen and (min-width: 450px){
+              .name-text{
+                font-size: 60px;
+              }
+            }
+
+            @media screen and (max-width: 450px){
+              .name-text{
+                font-size: 40px;
+              }
             }
 
             .skills-color{
