@@ -8,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
           <div class="row col-center" id="studies">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s" data-wow-duration="1.5s">
               <div class="row item-center">
-                <img class="small-logo" src="https://github.com/Sileax/CV/blob/master/img/svg/React.svg"/>
+                <img class="small-logo" src="../../../img/svg/React.svg"/>
               </div>
               <div class="row item-center">
                 <div class="cyan-text">REACT.JS</div>
@@ -23,7 +23,7 @@ import {Component, OnInit} from '@angular/core';
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow fadeIn" data-wow-delay="1s" data-wow-duration="2s">
               <div class="row item-center">
-                <img class="small-logo" src="https://github.com/Sileax/CV/blob/master/img/svg/angular.svg"/>
+                <img class="small-logo" src="../../../img/svg/angular.svg"/>
               </div>
               <div class="row item-center">
                 <div class="red-text">ANGULAR 2/4</div>
@@ -38,7 +38,7 @@ import {Component, OnInit} from '@angular/core';
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow fadeInRight" data-wow-delay="0.8s" data-wow-duration="1.5s">
               <div class="row item-center">
-                <img class="big-logo" src="https://github.com/Sileax/CV/blob/master/img/svg/Node.js.svg"/>
+                <img class="big-logo" src="../../../img/svg/Node.js.svg"/>
               </div>
               <div class="row item-center">
                 <div class="green-text">NODE.JS</div>
