@@ -54,6 +54,8 @@ export class CursusComponent implements AfterViewChecked {
   constructor(private _el : ElementRef, private _renderer : Renderer) {}
 
   ngAfterViewChecked() {
+    console.log(this._el);
+    
     this.position = this._el.nativeElement.offsetTop;
   }
 

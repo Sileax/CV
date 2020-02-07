@@ -1,7 +1,5 @@
 import {Component, ElementRef, Renderer, AfterContentChecked, Inject, ViewChild, HostListener, Input} from '@angular/core';
 import {trigger, state, style, animate, transition} from '@angular/animations';
-import {SimplePageScrollConfig, SimplePageScrollService} from 'ng2-simple-page-scroll';
-import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-profile',
@@ -11,7 +9,7 @@ import { DOCUMENT } from '@angular/platform-browser';
       ])])],
   template: `
       <section class="profile" #profileSection>
-        <div class="container-fluid" *ngIf="visibility" [@visibilityChanged]>
+        <div class="container-fluid">
           <div class="row" id="profile">
             <div class="col-12 text-margin">
                   <div class="text-center intro navbar-color font-weight-bold"><p>Bonjour ! </p> Je m'appelle Valerian et je suis développeur web.</div>
@@ -40,16 +38,7 @@ export class ProfileComponent implements AfterContentChecked {
   @ViewChild('profileSection') _el : ElementRef;
 
 
-  constructor(@Inject(DOCUMENT) private document: Document) {
-  }
-
   @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
-    let YPosition = this.document.body.scrollTop;
-    if (YPosition > this.position + this.parentHeight - window.screen.height / 2) {
-      this.visibility = true;
-    }
-  }
 
   ngAfterContentChecked() {
     this.position = this._el.nativeElement.offsetTop;
